@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Length Converter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 50px;
+        /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
 </head>
 
 <body>
@@ -14,43 +41,72 @@
     </div>
 
     <div class="Info">
-        <p style="margin-bottom:3px;">Type a value in any of the fields to between Length measurements:</p>
-        <div class="w3-half w3-margin-top">
-            <label>Feet</label>
-            <input id="inputFeet" class="w3-input w3-border" type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Meters</label>
-            <input id="inputMeters" class="w3-input w3-border" type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Inches</label>
-            <input id="inputInches" class="w3-input w3-border" type="number" placeholder="Inches" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Centimeters</label>
-            <input id="inputCentimeters" class="w3-input w3-border" type="number" placeholder="Centimeters" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Yards</label>
-            <input id="inputYards" class="w3-input w3-border" type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Kilometers</label>
-            <input id="inputKilometers" class="w3-input w3-border" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-        <div class="w3-half w3-margin-top">
-            <label>Miles</label>
-            <input id="inputMiles" class="w3-input w3-border" type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)"
-                onchange="lengthConverter(this.id,this.value)">
-        </div>
-    </div>
+        <h3 style="margin-bottom:3px;">Type a value in any of the fields to between Length measurements:</h3>
+        
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <label>Feet</label>
+                <input id="inputFeet"
+                    type="number" placeholder="Feet" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+
+            <div class="column" style="background-color:#aaa;">
+                <label>Meters</label>
+                <input id="inputMeters"  
+                    type="number" 
+                    placeholder="Meters" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+            
+            <div class="column" style="background-color:#aaa;">
+                <label>Inches</label>
+                <input id="inputInches" 
+                    type="number" 
+                    placeholder="Inches" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+            
+            <div class="column" style="background-color:#aaa;">
+                <label>Centimeters</label>
+                <input id="inputCentimeters" 
+                    type="number" 
+                    placeholder="Centimeters" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+            
+            <div class="column" style="background-color:#aaa;">
+                <label>Yards</label>
+                <input id="inputYards"  
+                    type="number" 
+                    placeholder="Yards" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+            
+            <div class="column" style="background-color:#aaa;">
+                <label>Kilometers</label>
+                <input id="inputKilometers"
+                    type="number" 
+                    placeholder="Kilometers" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+            
+            <div class="column" style="background-color:#aaa;">
+                <label>Miles</label>
+                <input id="inputMiles"
+                    type="number" 
+                    placeholder="Miles" 
+                    oninput="lengthConverter(this.id,this.value)"
+                    onchange="lengthConverter(this.id,this.value)">
+            </div>
+    
+    </div></div>
     <script>
         function lengthConverter(source, valNum) {
             valNum = parseFloat(valNum);
@@ -121,7 +177,7 @@
     </script>
     <h2>Feet</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="ft-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -159,7 +215,7 @@
 
     <h2>Meters</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="mt-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -197,7 +253,7 @@
 
     <h2>Inches</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="in-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -235,7 +291,7 @@
 
     <h2>Centimeters</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="cm-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -273,7 +329,7 @@
 
     <h2>Yards</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="yd-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -308,7 +364,7 @@
     <hr>
     <h2>Kilometers</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="km-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
@@ -343,7 +399,7 @@
     <hr>
     <h2>Miles</h2>
 
-    <table class="w3-table-all notranslate">
+    <table class="mi-conv-chart">
         <tbody>
             <tr>
                 <th style="width:40%;">Measurement</th>
