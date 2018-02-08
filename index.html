@@ -7,32 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Length Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-<style>
-    * {
-        box-sizing: border-box;
-    }
+        crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-        margin: 0;
-    }
+        body {
+            margin: 0;
+        }
 
-    /* Create two equal columns that floats next to each other */
-    .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-        height: 50px;
-        /* Should be removed. Only for demonstration */
-    }
+        /* Create two equal columns that floats next to each other */
 
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-</style>
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 50px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,71 +44,45 @@
 
     <div class="Info">
         <h3 style="margin-bottom:3px;">Type a value in any of the fields to between Length measurements:</h3>
-        
+
         <div class="row">
             <div class="column" style="background-color:#aaa;">
                 <label>Feet</label>
-                <input id="inputFeet"
-                    type="number" placeholder="Feet" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputFeet" type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
 
             <div class="column" style="background-color:#aaa;">
                 <label>Meters</label>
-                <input id="inputMeters"  
-                    type="number" 
-                    placeholder="Meters" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputMeters" type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-            
+
             <div class="column" style="background-color:#aaa;">
                 <label>Inches</label>
-                <input id="inputInches" 
-                    type="number" 
-                    placeholder="Inches" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputInches" type="number" placeholder="Inches" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-            
+
             <div class="column" style="background-color:#aaa;">
                 <label>Centimeters</label>
-                <input id="inputCentimeters" 
-                    type="number" 
-                    placeholder="Centimeters" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputCentimeters" type="number" placeholder="Centimeters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-            
+
             <div class="column" style="background-color:#aaa;">
                 <label>Yards</label>
-                <input id="inputYards"  
-                    type="number" 
-                    placeholder="Yards" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputYards" type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-            
+
             <div class="column" style="background-color:#aaa;">
                 <label>Kilometers</label>
-                <input id="inputKilometers"
-                    type="number" 
-                    placeholder="Kilometers" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-            
+
             <div class="column" style="background-color:#aaa;">
                 <label>Miles</label>
-                <input id="inputMiles"
-                    type="number" 
-                    placeholder="Miles" 
-                    oninput="lengthConverter(this.id,this.value)"
-                    onchange="lengthConverter(this.id,this.value)">
+                <input id="inputMiles" type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
             </div>
-    
-    </div></div>
+
+        </div>
+    </div>
     <script>
         function lengthConverter(source, valNum) {
             valNum = parseFloat(valNum);
@@ -180,8 +156,8 @@
     <table class="ft-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Meters</td>
@@ -218,8 +194,8 @@
     <table class="mt-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
@@ -256,8 +232,8 @@
     <table class="in-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
@@ -294,8 +270,8 @@
     <table class="cm-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
@@ -332,8 +308,8 @@
     <table class="yd-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
@@ -367,8 +343,8 @@
     <table class="km-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
@@ -402,8 +378,8 @@
     <table class="mi-conv-chart">
         <tbody>
             <tr>
-                <th style="width:40%;">Measurement</th>
-                <th style="width:60%;">Formula</th>
+                <th style="width:60%;">Measurement</th>
+                <th style="width:40%;">Formula</th>
             </tr>
             <tr>
                 <td class="measurement">Feet</td>
