@@ -28,7 +28,6 @@
             float: left;
             width: 50%;
             padding: 10px;
-            height: 50px;
             color: #fff
             /* Should be removed. Only for demonstration */
         }
@@ -44,8 +43,7 @@
         h1,
         h4,
         th,
-        td,
-        h3 {
+        td {
             color: #fff
         }
     </style>
@@ -57,50 +55,89 @@
             <div class="col-md-6 offset-md-3">
                 <h1 class="display-4 text-center mb-3">Length Converter</h1>
             </div>
+            <!-- Info -->
+            <div class="card bg-light mb-2" style="max-width: 50rem;">
+                <div class="card-block">
+                    <h3>Type a value in any of the fields to convert between length measurements:</h3>
+                </div>
+            </div>
 
-            <div class="Info">
-                <h3 style="margin-bottom:3px;">Type a value in any of the fields to between Length measurements:</h3>
-
-                <div class="row">
-                    <div class="column" style="background-color:green;">
-                        <input id="inputFeet" type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Feet</label>
+            <div class="row">
+                <!-- Feet -->
+                <div class="column">
+                    <div class="card-primary mb-2 text-white" style="max-width: 50rem;">
+                        <div class="card-block ">
+                            <input id="inputFeet " type="number " placeholder="Feet " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Feet</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:blue;">
-                        <input id="inputMeters" type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Meters</label>
+                <!-- Meter -->
+                <div class="column ">
+                    <div class="card-success mb-2 text-white" style="max-width: 50rem;">
+                        <div class="card-block">
+                            <input id="inputMeters " type="number " placeholder="Meters" oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Meters</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:orange;">
-                        <input id="inputInches" type="number" placeholder="Inches" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Inches</label>
+                <!-- Inches -->
+                <div class="column ">
+                    <div class="card-danger mb-2 text-white" style="max-width: 50rem; ">
+                        <div class="card-block ">
+                            <input id="inputInches " type="number " placeholder="Inches " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Inches</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:rgb(129, 129, 2);">
-
-                        <input id="inputCentimeters" type="number" placeholder="Centimeters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Centimeters</label>
+                <!-- Centimeters -->
+                <div class="column ">
+                    <div class="card-warning mb-2 text-white" style="max-width: 50rem; ">
+                        <div class="card-block ">
+                            <input id="inputCentimeters " type="number " placeholder="Centimeters " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Centimeters</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:purple;">
-
-                        <input id="inputYards" type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Yards</label>
+                <!-- Yards -->
+                <div class="column ">
+                    <div class="card-info mb-2 text-white" style="max-width: 50rem; ">
+                        <div class="card-block ">
+                            <input id="inputYards " type="number " placeholder="Yards " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Yards</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:red;">
-
-                        <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Kilometers</label>
+                <!-- Kilometers -->
+                <div class="column ">
+                    <div class="card-primary mb-2 text-white " style="max-width: 50rem; ">
+                        <div class="card-block ">
+                            <input id="inputKilometers " type="number " placeholder="Kilometers " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Kilometers</label>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="column" style="background-color:rgb(0, 141, 146);">
-
-                        <input id="inputMiles" type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                        <label>Miles</label>
+                <!-- Miles -->
+                <div class="column ">
+                    <div class="card-warning mb-2 text-white " style="max-width: 50rem; ">
+                        <div class="card-block ">
+                            <input id="inputMiles " type="number " placeholder="Miles " oninput="lengthConverter(this.id,this.value)
+                        " onchange="lengthConverter(this.id,this.value) ">
+                            <label>Miles</label>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -108,14 +145,14 @@
     <script>
         function lengthConverter(source, valNum) {
             valNum = parseFloat(valNum);
-            var inputFeet = document.getElementById("inputFeet");
-            var inputMeters = document.getElementById("inputMeters");
-            var inputInches = document.getElementById("inputInches");
-            var inputCentimeters = document.getElementById("inputCentimeters");
-            var inputYards = document.getElementById("inputYards");
-            var inputKilometers = document.getElementById("inputKilometers");
-            var inputMiles = document.getElementById("inputMiles");
-            if (source == "inputFeet") {
+            var inputFeet = document.getElementById("inputFeet ");
+            var inputMeters = document.getElementById("inputMeters ");
+            var inputInches = document.getElementById("inputInches ");
+            var inputCentimeters = document.getElementById("inputCentimeters ");
+            var inputYards = document.getElementById("inputYards ");
+            var inputKilometers = document.getElementById("inputKilometers ");
+            var inputMiles = document.getElementById("inputMiles ");
+            if (source == "inputFeet ") {
                 inputMeters.value = (valNum / 3.2808).toFixed(5);
                 inputInches.value = (valNum * 12).toFixed(5);
                 inputCentimeters.value = (valNum / 0.032808).toFixed(5);
@@ -123,7 +160,7 @@
                 inputKilometers.value = (valNum / 3280.8).toFixed(5);
                 inputMiles.value = (valNum * 0.00018939).toFixed(5);
             }
-            if (source == "inputMeters") {
+            if (source == "inputMeters ") {
                 inputFeet.value = (valNum * 3.2808).toFixed(5);
                 inputInches.value = (valNum * 39.370).toFixed(5);
                 inputCentimeters.value = (valNum / 0.01).toFixed(5);
@@ -131,7 +168,7 @@
                 inputKilometers.value = (valNum / 1000).toFixed(5);
                 inputMiles.value = (valNum * 0.00062137).toFixed(5);
             }
-            if (source == "inputInches") {
+            if (source == "inputInches ") {
                 inputFeet.value = (valNum * 0.083333).toFixed(5);
                 inputMeters.value = (valNum / 39.370).toFixed(5);
                 inputCentimeters.value = (valNum / 0.39370).toFixed(5);
@@ -139,7 +176,7 @@
                 inputKilometers.value = (valNum / 39370).toFixed(6);
                 inputMiles.value = (valNum * 0.000015783).toFixed(6);
             }
-            if (source == "inputCentimeters") {
+            if (source == "inputCentimeters ") {
                 inputFeet.value = (valNum * 0.032808).toFixed(5);
                 inputMeters.value = (valNum / 100).toFixed(5);
                 inputInches.value = (valNum * 0.39370).toFixed(5);
@@ -147,7 +184,7 @@
                 inputKilometers.value = (valNum / 100000).toFixed(6);
                 inputMiles.value = (valNum * 0.0000062137).toFixed(6);
             }
-            if (source == "inputYards") {
+            if (source == "inputYards ") {
                 inputFeet.value = (valNum * 3).toFixed(5);
                 inputMeters.value = (valNum / 1.0936).toFixed(5);
                 inputInches.value = (valNum * 36).toFixed(5);
@@ -155,7 +192,7 @@
                 inputKilometers.value = (valNum / 1093.6).toFixed(5);
                 inputMiles.value = (valNum * 0.00056818).toFixed(5);
             }
-            if (source == "inputKilometers") {
+            if (source == "inputKilometers ") {
                 inputFeet.value = (valNum * 3280.8).toFixed(5);
                 inputMeters.value = (valNum * 1000).toFixed(5);
                 inputInches.value = (valNum * 39370).toFixed(5);
@@ -163,7 +200,7 @@
                 inputYards.value = (valNum * 1093.6).toFixed(5);
                 inputMiles.value = (valNum * 0.62137).toFixed(5);
             }
-            if (source == "inputMiles") {
+            if (source == "inputMiles ") {
                 inputFeet.value = (valNum * 5280).toFixed(5);
                 inputMeters.value = (valNum / 0.00062137).toFixed(5);
                 inputInches.value = (valNum * 63360).toFixed(5);
@@ -178,32 +215,32 @@
     <table>
         <tbody>
             <tr>
-                <th scope="col" style="width:60%;">Measurement</th>
-                <th scope="col" style="width:40%;">Formula</th>
+                <th scope="col " style="width:60%; ">Measurement</th>
+                <th scope="col " style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=ft/3.2808</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=ft/3.2808</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=ft*12</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=ft*12</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=ft/0.032808</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=ft/0.032808</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">yd=ft*0.33333</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">yd=ft*0.33333</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=ft/3280.8</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=ft/3280.8</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=ft*0.00018939</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=ft*0.00018939</td>
             </tr>
 
         </tbody>
@@ -211,35 +248,35 @@
 
     <h4>Meters</h4>
 
-    <table class="mt-conv-chart">
+    <table class="mt-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=m*3.2808</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=m*3.2808</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=m*39.370</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=m*39.370</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=m/0.01</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=m/0.01</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">yd=m*1.0936</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">yd=m*1.0936</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=m/1000</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=m/1000</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=m*0.00062137</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=m*0.00062137</td>
             </tr>
 
         </tbody>
@@ -247,35 +284,35 @@
 
     <h4>Inches</h4>
 
-    <table class="in-conv-chart">
+    <table class="in-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=in*0.083333</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=in*0.083333</td>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=in/39.370</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=in/39.370</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=in/0.39370</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=in/0.39370</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">yd=in*0.027778</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">yd=in*0.027778</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=in/39370</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=in/39370</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=in*0.000015783</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=in*0.000015783</td>
             </tr>
 
         </tbody>
@@ -283,35 +320,35 @@
 
     <h4>Centimeters</h4>
 
-    <table class="cm-conv-chart">
+    <table class="cm-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=cm*0.032808</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=cm*0.032808</td>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=cm/100</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=cm/100</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=cm*0.39370</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=cm*0.39370</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">yd=cm*0.010936</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">yd=cm*0.010936</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=cm/100000</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=cm/100000</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=cm*0.0000062137</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=cm*0.0000062137</td>
             </tr>
 
         </tbody>
@@ -319,103 +356,103 @@
 
     <h4>Yards</h4>
 
-    <table class="yd-conv-chart">
+    <table class="yd-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=yd*3</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=yd*3</td>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=yd/1.0936</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=yd/1.0936</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=yd*36</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=yd*36</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=yd/0.010936</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=yd/0.010936</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=yd/1093.6</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=yd/1093.6</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=yd*0.00056818</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=yd*0.00056818</td>
             </tr>
         </tbody>
     </table>
     <h4>Kilometers</h4>
 
-    <table class="km-conv-chart">
+    <table class="km-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=km*3280.8</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=km*3280.8</td>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=km*1000</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=km*1000</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=km*39370</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=km*39370</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=km*100000</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=km*100000</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">mi=yd*1093.6</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">mi=yd*1093.6</td>
             </tr>
             <tr>
-                <td class="measurement">Miles</td>
-                <td class="formula">mi=km*0.62137</td>
+                <td class="measurement ">Miles</td>
+                <td class="formula ">mi=km*0.62137</td>
             </tr>
         </tbody>
     </table>
     <h4>Miles</h4>
 
-    <table class="mi-conv-chart">
+    <table class="mi-conv-chart ">
         <tbody>
             <tr>
-                <th style="width:60%;">Measurement</th>
-                <th style="width:40%;">Formula</th>
+                <th style="width:60%; ">Measurement</th>
+                <th style="width:40%; ">Formula</th>
             </tr>
             <tr>
-                <td class="measurement">Feet</td>
-                <td class="formula">ft=mi*5280</td>
+                <td class="measurement ">Feet</td>
+                <td class="formula ">ft=mi*5280</td>
             </tr>
             <tr>
-                <td class="measurement">Meters</td>
-                <td class="formula">m=mi/0.00062137</td>
+                <td class="measurement ">Meters</td>
+                <td class="formula ">m=mi/0.00062137</td>
             </tr>
             <tr>
-                <td class="measurement">Inches</td>
-                <td class="formula">in=mi*63360</td>
+                <td class="measurement ">Inches</td>
+                <td class="formula ">in=mi*63360</td>
             </tr>
             <tr>
-                <td class="measurement">Centimeters</td>
-                <td class="formula">cm=mi/0.0000062137</td>
+                <td class="measurement ">Centimeters</td>
+                <td class="formula ">cm=mi/0.0000062137</td>
             </tr>
             <tr>
-                <td class="measurement">Yards</td>
-                <td class="formula">yd=mi*1760</td>
+                <td class="measurement ">Yards</td>
+                <td class="formula ">yd=mi*1760</td>
             </tr>
             <tr>
-                <td class="measurement">Kilometers</td>
-                <td class="formula">km=mi/0.62137</td>
+                <td class="measurement ">Kilometers</td>
+                <td class="formula ">km=mi/0.62137</td>
 
             </tr>
         </tbody>
